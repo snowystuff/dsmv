@@ -5,7 +5,6 @@
 }
 
 /* Default font and widths */
-
 @font-face {
     font-family: 'Regular';
     src: url('font/reg.ttf');
@@ -24,14 +23,12 @@
 }
 
 /* Default Properties */
-
 * {
 	padding: 0; 
 	margin: 0;
 	font-family: 'Regular';
 	user-select: none;
 }
-
 img {
 	user-drag: none;
     -webkit-user-drag: none;
@@ -40,11 +37,9 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-
 h1 {
 	color: #e9edf5;
 }
-
 body {
 	background-color: #363238;
 	height: calc(100vh - 32px);
@@ -61,7 +56,6 @@ body {
 	app-region: drag;
 	z-index: 200;
 }
-
 .window_topbar h1 { /* this is the window title */
 	position: relative;
 	font-size: 18px;
@@ -69,12 +63,10 @@ body {
 	padding: 2px 7px 7px 8px;
 	float: right;
 }
-
 .window_buttons {
 	position: absolute;
 	display: flex;
 }
-
 .window_buttons button {
 	background-color: transparent;
 	outline: none;
@@ -83,7 +75,6 @@ body {
 	height: 32px;
 	padding: 0;
 }
-
 .window_buttons img {
 	app-region: no-drag;
 	width: 24px;
@@ -101,14 +92,12 @@ body {
 	height: 100%; /* calc(100vh - 32px) */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5vw 0 rgba(0, 0, 0, 0.19);
 }
-
 .main_sidebar_title {
 	position: relative;
 	display: flex;
 	width: 100%;
 	justify-content: center;
 }
-
 .main_sidebar_title img {
 	width: 100%;
 	padding-top: 5%;
@@ -118,15 +107,10 @@ body {
 	max-width: 250px;
 	justify-content: center;
 }
-
 .main_container {
 	position: absolute;
 	width: calc(100% - calc(110px + 18vw));
 	height: 100%;
-}
-
-.main_container h1 {
-	
 }
 
 /* Input frame */
@@ -142,7 +126,6 @@ body {
 	z-index: 300;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5vw 0 rgba(0, 0, 0, 0.19);
 }
-
 #frame_background {
 	background-color: #0000007A;
 	position: absolute;
@@ -152,7 +135,6 @@ body {
 	left: 0;
 	z-index: 298;
 }
-
 .ui_text_padding {
 	padding: 0px 16px 16px 16px;
 }
