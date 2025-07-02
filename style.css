@@ -1,0 +1,107 @@
+/* DSMV STUDIO CSS */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Default font and widths */
+
+@font-face {
+    font-family: 'Regular';
+    src: url('font/reg.ttf');
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('font/lgt.ttf');
+}
+
+@font-face {
+    font-family: 'Extra Light';
+    src: url('font/elg.ttf');
+}
+
+@font-face {
+    font-family: 'Thin';
+    src: url('font/thn.ttf');
+}
+
+/* Default Properties */
+
+* {
+	padding: 0; 
+	margin: 0;
+	font-family: 'Regular';
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+h1 {
+	color: #e9edf5;
+}
+
+body {
+	background-color: #363238;
+	height: calc(100vh - 32px);
+}
+
+/* Window control/topbar */
+.window_topbar {
+	position: relative;
+	background-color: #363238;
+	width: 100vw;
+	height: 32px;
+	-webkit-app-region: drag;
+	z-index: 1000;
+}
+
+.window_topbar h1 { /* this is the window title */
+	font-size: 18px;
+	font-family: "Thin";
+	padding: 2px 7px 7px 8px;
+}
+
+/* Main window sidebar */
+.main_sidebar {
+	display: block;
+	float: right;
+	width: calc(110px + 18vw);
+	height: 100%; /* calc(100vh - 32px) */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5vw 0 rgba(0, 0, 0, 0.19);
+}
+
+.main_sidebar_title {
+	position: relative;
+	/*
+	
+	float: right;
+	*/
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.main_sidebar_title img {
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	max-width: 250px;
+	justify-content: center;
+}
+
+.main_container {
+	position: absolute;
+	width: calc(100% - calc(110px + 18vw));
+	height: 100%;
+}
+
+.ui_text_padding {
+	padding: 0px 16px 16px 16px;
+}
+
+/* debug background colors */
+.deb_red {
+	background-color: #ff0000;
+}
