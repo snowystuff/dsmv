@@ -10,17 +10,14 @@
     font-family: 'Regular';
     src: url('font/reg.ttf');
 }
-
 @font-face {
     font-family: 'Light';
     src: url('font/lgt.ttf');
 }
-
 @font-face {
     font-family: 'Extra Light';
     src: url('font/elg.ttf');
 }
-
 @font-face {
     font-family: 'Thin';
     src: url('font/thn.ttf');
