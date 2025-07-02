@@ -29,8 +29,16 @@
 	padding: 0; 
 	margin: 0;
 	font-family: 'Regular';
-	-webkit-user-select: none;
 	user-select: none;
+}
+
+img {
+	user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 h1 {
@@ -40,6 +48,7 @@ h1 {
 body {
 	background-color: #363238;
 	height: calc(100vh - 32px);
+	overflow: hidden
 }
 
 /* Window control/topbar */
@@ -48,31 +57,52 @@ body {
 	background-color: #363238;
 	width: 100vw;
 	height: 32px;
-	-webkit-app-region: drag;
+	app-region: drag;
 	z-index: 1000;
 }
 
 .window_topbar h1 { /* this is the window title */
+	position: relative;
 	font-size: 18px;
 	font-family: "Thin";
 	padding: 2px 7px 7px 8px;
+	float: right;
+}
+
+.window_buttons {
+	position: absolute;
+	display: flex;
+}
+
+.window_buttons button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+}
+
+.window_buttons img {
+	app-region: no-drag;
+	width: 24px;
+	height: 24px;
+	padding: 4px;
 }
 
 /* Main window sidebar */
 .main_sidebar {
+	position: absolute;
 	display: block;
 	float: right;
 	width: calc(110px + 18vw);
+	right: 0;
 	height: 100%; /* calc(100vh - 32px) */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5vw 0 rgba(0, 0, 0, 0.19);
 }
 
 .main_sidebar_title {
 	position: relative;
-	/*
-	
-	float: right;
-	*/
 	display: flex;
 	width: 100%;
 	justify-content: center;
