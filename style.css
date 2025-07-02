@@ -142,6 +142,25 @@ body {
 	font-family: "Bold";
 	color: #e9edf5;
 }
+.input_buttons {
+	position: fixed;
+	display: block;
+	float: bottom;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10%;
+	padding: 4px 4px 4px 4px;
+	align-content: end;
+}
+.input_buttons button {
+	position: relative;
+	height: 100%;
+	max-height: 64px;
+	font-size: 2vmin;
+	bottom: 0;
+	padding: 2px 2vmin 2px 2vmin;
+}
 #frame_background {
 	background-color: #0000007A;
 	position: absolute;
