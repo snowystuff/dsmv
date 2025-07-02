@@ -1,7 +1,7 @@
 i_ok = document.getElementById("input_ok");
 i_cancel = document.getElementById("input_cancel");
 
-test_new = document.getElementById("new_project");
+test_new = document.getElementsByClassName("open_input")[0];
 
 bg = document.getElementById("frame_background");
 
@@ -19,8 +19,8 @@ function updateFrame(bool,send) {
 		bg.style.display = "none";
 		inpfall.style.display = "none";
 	} else {
-		bg.style.display = "unset";
-		inpfall.style.display = "unset";
+		bg.style.display = "block";
+		inpfall.style.display = "block";
 	}
 }
 
