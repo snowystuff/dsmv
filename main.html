@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DS Maker V</title>
-	<link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-	<div class="window_topbar">
-		<div class="window_buttons">
-			<button id="window_close" type="window_button_close">
-				<img src="img/ui/close.png" border="0" />
-			</button>
-			<button type="window_button_maximize" id="window_maximize">
-				<img src="img/ui/fullscreen.png" border="0" />
-			</button>
-			<button type="window_button_minimize" id="window_minimize">
-				<img src="img/ui/minimize.png" border="0" />
-			</button>
+	<head>
+		<title>DS Maker V</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="window_topbar">
+			<div class="window_buttons">
+				<button id="window_close" type="window_button_close">
+					<img src="img/ui/close.png" border="0" />
+				</button>
+				<button type="window_button_maximize" id="window_maximize">
+					<img src="img/ui/fullscreen.png" border="0" />
+				</button>
+				<button type="window_button_minimize" id="window_minimize">
+					<img src="img/ui/minimize.png" border="0" />
+				</button>
+			</div>
+			<h1 id="window_title">DS Maker V</h1>
 		</div>
-		<h1 id="window_title">DS Maker V</h1>
-	</div>
-	<div class="main_container">
-		<h1 class="ui_text_padding">Recent Projects</h1>
-	</div>
-    <div class="main_sidebar">
-		<div class="main_sidebar_title">
-			<img src="img/default.bmp">
+		<div class="main_container">
+			<h1 class="ui_text_padding">Recent Projects</h1>
 		</div>
-		<button>New Project</button>
-		<button>Open Project</button>
-		<button>Editor Settings</button>
-	</div>
-  </body>
-  <script src="window.js"></script>
+		<div class="main_sidebar">
+			<div class="main_sidebar_title">
+				<img src="img/default.bmp">
+			</div>
+			<button id="new_project">New Project</button>
+			<button>Open Project</button>
+			<button>Editor Settings</button>
+		</div>
+		<div class="input_frame" name="new_project">
+			<h1>New project</h1>
+			<label for="input_text">Project Name:</label>
+			<input type="text" id="input_text" name="project_name" />
+			<div class="input_buttons">
+				<button id="input_ok">Make new project</button>
+				<button id="input_cancel">Cancel</button>
+			</div>
+		</div>
+		<div id="frame_background" />
+	</body>
+	<script src="window.js"></script>
+	<script src="input.js"></script>
 </html>
