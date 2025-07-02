@@ -1,12 +1,15 @@
-i_ok = document.getElementById("input_ok");
-i_cancel = document.getElementById("input_cancel");
+var i_ok = document.getElementById("input_ok");
+var i_cancel = document.getElementById("input_cancel");
 
-test_new = document.getElementsByClassName("open_input")[0];
+var test_new = document.getElementsByClassName("open_input")[0];
+var test_settings = document.getElementsByClassName("open_window")[0];
 
-bg = document.getElementById("frame_background");
+var bg = document.getElementById("frame_background");
 
-inpfall = document.getElementsByClassName("input_frame")[0];
-inpfen = false;
+var inpfall = document.getElementsByClassName("input_frame")[0];
+var inpfen = false;
+
+var platform = window.electron.platform
 
 function updateFrame(bool,send) {
 	if (bool === true || bool === false) {
@@ -34,6 +37,10 @@ i_cancel.addEventListener('click', () => {
 
 test_new.addEventListener('click', () => {
 	updateFrame(true);
+});
+
+test_settings.addEventListener('click', () => {
+	window.electron.send('debug-spawn-editor');
 });
 
 updateFrame(false);

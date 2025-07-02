@@ -1,8 +1,8 @@
-b_close = document.getElementById('window_close');
-b_max = document.getElementById('window_maximize');
-b_min = document.getElementById('window_minimize');
+var b_close = document.getElementById('window_close');
+var b_max = document.getElementById('window_maximize');
+var b_min = document.getElementById('window_minimize');
 
-platform = window.electron.platform
+var platform = window.electron.platform
 
 b_close.addEventListener('click', () => {
 	window.electron.send('winClose');
