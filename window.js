@@ -4,20 +4,29 @@ var b_min = document.getElementById('window_minimize');
 
 var platform = window.electron.platform
 
-b_close.addEventListener('click', () => {
-	window.electron.send('winClose');
-});
+if (b_close) {
+	if (platform === 'darwin') {
+		b_close.style.display = 'none';
+	}
+	b_close.addEventListener('click', () => {
+		window.electron.send('winClose');
+	});
+}
 
-b_min.addEventListener('click', () => {
-	window.electron.send('winMinimize');
-});
+if (b_min) {
+	if (platform === 'darwin') {
+		b_min.style.display = 'none';
+	}
+	b_min.addEventListener('click', () => {
+		window.electron.send('winMinimize');
+	});
+}
 
-b_max.addEventListener('click', () => {
-	window.electron.send('winMaximize');
-});
-
-if (platform === 'darwin') {
-	b_close.style.display = 'none';
-	b_max.style.display = 'none';
-	b_min.style.display = 'none';
+if (b_max) {
+	if (platform === 'darwin') {
+		b_min.style.display = 'none';
+	}
+	b_max.addEventListener('click', () => {
+		window.electron.send('winMaximize');
+	});
 }
