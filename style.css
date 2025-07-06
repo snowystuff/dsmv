@@ -1,8 +1,6 @@
 /* DSMV STUDIO CSS */
 
-::-webkit-scrollbar {
-    display: none;
-}
+::-webkit-scrollbar {display: none;}
 
 /* Default font and widths */
 @font-face {
@@ -41,9 +39,7 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-h1 {
-	color: #e9edf5;
-}
+h1 {color: #e9edf5;}
 body {
 	background-color: #363238;
 	height: calc(100vh - 32px);
@@ -116,6 +112,7 @@ body {
 	width: calc(100% - calc(110px + 18vw));
 	height: 100%;
 }
+.main_container h1 {font-size: 6vmin;}
 
 /* Input frame */
 .input_frame {
@@ -160,7 +157,22 @@ body {
 	font-size: 2vmin;
 	bottom: 0;
 	padding: 2px 2vmin 2px 2vmin;
+	border-radius: 1vmin;
 }
+.input_buttons #input_ok {
+	background-color: #e9edf5;
+	border-style: none;
+	color: #363238;
+}
+
+.input_buttons #input_cancel {
+	background-color: #00000000;
+	border-style: solid;
+	border-color: #e9edf5;
+	border-width: 0.25vmin;
+	color: #e9edf5;
+}
+
 #frame_background {
 	background-color: #0000007A;
 	position: absolute;
