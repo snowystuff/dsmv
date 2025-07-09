@@ -2,16 +2,13 @@
 <html>
 	<head>
 		<title>DS Maker V</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="theme/splash/dark.css">
 	</head>
 	<body>
 		<div class="window_topbar">
 			<div class="window_buttons">
 				<button id="window_close" type="window_button_close">
 					<img src="img/ui/close.png" border="0" />
-				</button>
-				<button type="window_button_maximize" id="window_maximize">
-					<img src="img/ui/fullscreen.png" border="0" />
 				</button>
 				<button type="window_button_minimize" id="window_minimize">
 					<img src="img/ui/minimize.png" border="0" />
@@ -33,10 +30,14 @@
 		<div class="input_frame" name="new_project">
 			<div class="input_frame_title">New project</div>
 			<label for="input_text">Project Name:</label>
-			<input type="text" id="input_text" name="project_name" />
+			<input type="text" class="input_text" name="project_name" />
+			<label for="input_text">Project Directory:</label>
+			<input type="text" class="input_directory" name="project_dir" readonly />
+			<button class="input_directory_button" name="project_dir">Select folder</button>
+			<p>New folder will be made in (DIRECTORY)</p>
 			<div class="input_buttons">
-				<button id="input_ok">Make new project</button>
-				<button id="input_cancel">Cancel</button>
+				<button class="input_ok">Make new project</button>
+				<button class="input_cancel">Cancel</button>
 			</div>
 		</div>
 		<div id="frame_background" />

@@ -1,9 +1,10 @@
-var i_ok = document.getElementById("input_ok");
-var i_cancel = document.getElementById("input_cancel");
+var i_ok = document.getElementsByClassName("input_ok")[0];
+var i_cancel = document.getElementsByClassName("input_cancel")[0];
 
 var test_new = document.getElementsByClassName("open_input")[0];
 var test_settings = document.getElementsByClassName("open_window")[0];
 var test_open = document.getElementsByClassName("open_file")[0];
+var test_dir = document.getElementsByClassName("input_directory_button")[0];
 
 var bg = document.getElementById("frame_background");
 
@@ -55,6 +56,10 @@ test_settings.addEventListener('click', () => {
 
 test_open.addEventListener('click', () => {
 	window.electron.send('openFile',{title: 'Open DSMV Project',files: [filetype.project]});
+});
+
+test_dir.addEventListener('click', () => {
+	window.electron.send('openFile',{title: 'Open DSMV Project',directory:true});
 });
 
 updateFrame(false);

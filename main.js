@@ -12,15 +12,22 @@ async function openFile(tags) {
 	let filter = []
 	var title;
 	var files = [];
+	var properties = [];
 	if (tags) {
 		title = tags.title;
 		files = tags.files || [];
+		if (tags.file === undefined || tags.file === true) {
+			properties.push('openFile');
+		}
+		if (tags.directory === true) {
+			properties.push('openDirectory');
+		}
 	}
 	for (let i = 0; i < files.length; i++) {
 		filter.push({name:files[i][1],extensions:files[i][0]});
 	}
 	let file = await dialog.showOpenDialog({
-		properties: ['openFile'],
+		properties: properties,
 		title: title,
 		filters: filter
 		})
@@ -52,7 +59,7 @@ function newWindow(preload,w,h,resizable) {
 }
 
 const createWindow = () => {
-	const win = newWindow(true);
+	const win = newWindow(true,undefined,undefined,false);
 	win.loadFile('main.html');
 	
 	ipcMain.on('error', (event,error) => {

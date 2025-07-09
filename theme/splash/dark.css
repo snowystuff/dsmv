@@ -1,6 +1,12 @@
 /* DSMV STUDIO CSS */
 
 ::-webkit-scrollbar {display: none;}
+:root {
+	--dark: #363238;
+	--light: #e9edf5;
+	
+	background-color: var(--dark);
+}
 
 /* Default font and widths */
 @font-face {
@@ -39,9 +45,8 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-h1 {color: #e9edf5;}
+h1 {color: var(--light);}
 body {
-	background-color: #363238;
 	height: calc(100vh - 32px);
 	overflow: hidden;
 	z-index: 1;
@@ -50,7 +55,7 @@ body {
 /* Window control/topbar */
 .window_topbar {
 	position: relative;
-	background-color: #363238;
+	background-color: var(--dark);
 	width: 100vw;
 	height: 32px;
 	app-region: drag;
@@ -117,7 +122,7 @@ body {
 /* Input frame */
 .input_frame {
 	position: absolute;
-	background-color: #363238;
+	background-color: var(--dark);
 	top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -137,7 +142,7 @@ body {
 	align-content: center;
 	padding: 0px 8px 4px 8px;
 	font-family: "Bold";
-	color: #e9edf5;
+	color: var(--light);
 }
 .input_buttons {
 	position: fixed;
@@ -154,23 +159,23 @@ body {
 	position: relative;
 	height: 100%;
 	max-height: 64px;
-	font-size: 2vmin;
+	font-size: 2.5vmin;
 	bottom: 0;
 	padding: 2px 2vmin 2px 2vmin;
 	border-radius: 1vmin;
 }
-.input_buttons #input_ok {
-	background-color: #e9edf5;
+.input_buttons .input_ok {
+	background-color: var(--light);
 	border-style: none;
-	color: #363238;
+	color: var(--dark);
+	font-family: 'Bold';
 }
-
-.input_buttons #input_cancel {
+.input_buttons .input_cancel {
 	background-color: #00000000;
 	border-style: solid;
-	border-color: #e9edf5;
+	border-color: var(--light);
 	border-width: 0.25vmin;
-	color: #e9edf5;
+	color: var(--light);
 }
 
 #frame_background {
